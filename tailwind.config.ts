@@ -11,31 +11,23 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
-        brand: {
-          dark: "#121212",
-          black: "#0a0a0a",
-          peach: "#FFEAE3",
-          peachLight: "#FFF6F3",
-          peachDark: "#FFD2C3",
+        editorial: {
+          black: "#020101",
+          sage: "#CBD1CF",
+          peach: "#FFD2C3",
+          blush: "#FFEAE3",
           cream: "#FAF4E8",
+          yellow: "#F5FE6C",
           blue: "#487AFF",
-          blueHover: "#3363e0",
-          gray: "#737373",
-          lightGray: "#F7F7F7",
+          border: "#181818",
         },
       },
       fontFamily: {
-        serif: ["var(--font-playfair)", "Georgia", "serif"],
-        sans: ["var(--font-sans)", "system-ui", "sans-serif"],
-      },
-      animation: {
-        marquee: "marquee 25s linear infinite",
-      },
-      keyframes: {
-        marquee: {
-          "0%": { transform: "translateX(0%)" },
-          "100%": { transform: "translateX(-50%)" },
-        },
+        magnificent: ["SVN-Magnificent", "serif"],
+        outersans: ["SVN-OuterSans-Regular", "sans-serif"],
+        "outersans-thin": ["SVN-OuterSans-Thin", "sans-serif"],
+        "outersans-outline": ["SVN-OuterSansOutline-Regular", "sans-serif"],
+        ginger: ["SVN-Ginger", "sans-serif"],
       },
     },
   },

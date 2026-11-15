@@ -2,28 +2,92 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #FFFDFC;
-  --foreground: #121212;
+@font-face {
+  font-family: 'SVN-Magnificent';
+  src: url('/fonts/SVN-Magnificent.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
-html {
-  scroll-behavior: smooth;
+@font-face {
+  font-family: 'SVN-OuterSans-Regular';
+  src: url('/fonts/SVN-OuterSans-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SVN-OuterSans-Thin';
+  src: url('/fonts/SVN-OuterSans-Thin.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SVN-OuterSansOutline-Regular';
+  src: url('/fonts/SVN-OuterSansOutline-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SVN-Ginger';
+  src: url('/fonts/SVN-Ginger.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #020101;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: var(--font-sans), sans-serif;
-  overflow-x: hidden;
+  color: #020101;
+  background-color: #ffffff;
+  font-family: 'SVN-Magnificent', serif;
+  -webkit-font-smoothing: antialiased;
 }
 
-/* Custom styling for editorial vibe */
-.font-editorial {
-  font-family: var(--font-playfair), Georgia, serif;
+/* Custom Text Stroke Utilities */
+.stroke-blue-text {
+  color: transparent !important;
+  -webkit-text-stroke: 1.5px #487AFF;
+}
+
+.stroke-black-text {
+  color: transparent !important;
+  -webkit-text-stroke: 1.5px #020101;
+}
+
+/* Original Pill button with feather arrow */
+.editorial-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-family: 'SVN-OuterSans-Thin', sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 12px 28px;
+  border-radius: 9999px;
+  border: 1px solid #181818;
+  color: #020101;
+  background-color: transparent;
+  transition: all 0.25s ease;
+}
+
+.editorial-btn:hover {
+  background-color: #F7F7F7;
+  color: #020101;
 }
 
 ::selection {
   background-color: #FFD2C3;
-  color: #121212;
+  color: #020101;
 }

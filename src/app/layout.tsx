@@ -1,20 +1,7 @@
 import type { Metadata } from "next";
-import { Playfair_Display, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-
-const playfair = Playfair_Display({
-  subsets: ["latin", "vietnamese"],
-  variable: "--font-playfair",
-  display: "swap",
-});
-
-const plusJakarta = Plus_Jakarta_Sans({
-  subsets: ["latin", "vietnamese"],
-  variable: "--font-sans",
-  display: "swap",
-});
 
 export const metadata: Metadata = {
   title: "Trang Lê (Lam Khiết) | Đào tạo nghề viết Content Marketing & Social Media",
@@ -45,8 +32,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="vi" className={`${playfair.variable} ${plusJakarta.variable}`}>
-      <body className="min-h-screen flex flex-col font-sans text-brand-dark bg-[#FFFDFC] antialiased">
+    <html lang="vi">
+      <body className="min-h-screen flex flex-col font-magnificent text-[#020101] bg-white antialiased">
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />

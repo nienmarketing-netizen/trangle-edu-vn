@@ -2,18 +2,18 @@ import Image from "next/image";
 
 export default function PressMedia() {
   return (
-    <section className="py-12 bg-white border-y border-neutral-100">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <p className="text-xs uppercase tracking-[0.25em] font-semibold text-neutral-400 mb-8">
-          TRANG LÊ VÀ BÁO CHÍ • TRUYỀN THÔNG NÓI GÌ
-        </p>
+    <section className="bg-[#020101] text-white py-10 px-6 sm:px-12 lg:px-20 border-b border-[#181818]">
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
+        <h3 className="font-magnificent text-lg sm:text-xl font-semibold tracking-[2px] uppercase text-white whitespace-nowrap">
+          TRANG LÊ VÀ BÁO CHÍ
+        </h3>
 
-        <div className="relative max-w-4xl mx-auto h-16 sm:h-20 grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-300">
+        <div className="relative w-full max-w-2xl h-14 sm:h-16 invert">
           <Image
             src="/uploads/2023/03/BAO-CHI.png"
-            alt="Trang Lê trên các trang báo chí uy tín"
+            alt="Trang Lê và Báo chí"
             fill
-            className="object-contain"
+            className="object-contain object-center md:object-right"
           />
         </div>
       </div>

@@ -1,45 +1,60 @@
 import Link from "next/link";
-import { ArrowRight, Sparkles, ShieldCheck } from "lucide-react";
+import { FeatherArrow } from "@/components/EditorialArrow";
 
 export default function CtaSection() {
+  const stats = [
+    { num: "8", label: "NĂM" },
+    { num: "500+", label: "HỌC VIÊN" },
+    { num: "100%", label: "HỌC VIÊN HÀI LÒNG" },
+  ];
+
   return (
-    <section className="py-20 bg-gradient-to-br from-brand-peach via-[#FFF7F4] to-white relative overflow-hidden">
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/80 backdrop-blur-sm border border-brand-peachDark text-xs font-semibold tracking-wider text-brand-dark uppercase mb-6">
-          <Sparkles className="w-3.5 h-3.5 text-brand-blue" />
-          <span>BƯỚC ĐI ĐẦU TIÊN CỦA BẠN</span>
+    <>
+      {/* Section 11: 3 Big Summary Counters on Salmon #FFD2C3 */}
+      <section className="bg-[#FFD2C3] border-b border-[#181818] py-16 sm:py-20 px-6 sm:px-12 lg:px-20">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 sm:gap-12 text-center">
+          {stats.map((s, i) => (
+            <div key={i} className="space-y-4">
+              <div className="font-outersans-outline text-7xl sm:text-8xl lg:text-9xl font-black text-[#020101] leading-none">
+                {s.num}
+              </div>
+              <p className="font-magnificent text-base sm:text-lg font-bold tracking-[2px] uppercase text-[#020101]">
+                {s.label}
+              </p>
+            </div>
+          ))}
         </div>
+      </section>
 
-        <h2 className="font-editorial text-3xl sm:text-4xl lg:text-5xl font-bold text-neutral-900 leading-tight mb-6">
-          Đồng hành cùng nhau nhé!
-        </h2>
+      {/* Section 12: ĐỒNG HÀNH CÙNG NHAU NHÉ! */}
+      <section className="bg-white border-b border-[#181818] py-20 sm:py-28 px-6 sm:px-12 lg:px-20 text-center">
+        <div className="max-w-4xl mx-auto space-y-8">
+          <h2 className="font-outersans text-5xl sm:text-7xl lg:text-8xl font-black text-[#020101] uppercase tracking-tight leading-none">
+            ĐỒNG HÀNH CÙNG NHAU NHÉ!
+          </h2>
 
-        <p className="text-base sm:text-lg text-neutral-700 max-w-2xl mx-auto mb-8 leading-relaxed">
-          Bạn đã sẵn sàng để bắt đầu hành trình tự do của mình chưa? Học thử hoàn toàn miễn phí khóa học{" "}
-          <strong className="text-neutral-900 font-semibold">Social Media Manager</strong> để khám phá tiềm năng viết lách của chính bạn.
-        </p>
+          <p className="font-magnificent text-lg sm:text-xl text-[#020101] max-w-2xl mx-auto leading-relaxed">
+            Học thử hoàn toàn miễn phí để khám phá tiềm năng và bắt đầu sự nghiệp tự do của bạn ngay hôm nay.
+          </p>
 
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <Link
-            href="/register-trial-lesson"
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full bg-brand-dark text-white font-semibold text-sm uppercase tracking-wider hover:bg-brand-blue shadow-lg hover:shadow-xl transition-all duration-300"
-          >
-            Đăng ký học thử ngay (Miễn phí)
-            <ArrowRight className="w-4 h-4" />
-          </Link>
-          <Link
-            href="/trang-newletter"
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-white border border-neutral-300 text-neutral-800 font-semibold text-sm uppercase tracking-wider hover:bg-brand-peach transition-colors"
-          >
-            Đăng ký nhận bản tin
-          </Link>
+          <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-6">
+            <Link
+              href="/register-trial-lesson"
+              className="editorial-btn text-sm tracking-[1.5px] bg-[#FFD2C3] hover:bg-white"
+            >
+              <FeatherArrow className="w-5 h-4" />
+              <span>ĐĂNG KÝ HỌC THỬ MIỄN PHÍ</span>
+            </Link>
+
+            <Link
+              href="/trang-newletter"
+              className="editorial-btn text-sm tracking-[1.5px]"
+            >
+              <span>NHẬN BẢN TIN TỪ TRANG</span>
+            </Link>
+          </div>
         </div>
-
-        <div className="mt-8 flex items-center justify-center gap-2 text-xs text-neutral-500">
-          <ShieldCheck className="w-4 h-4 text-emerald-600" />
-          <span>Không mất phí • Nhận tài liệu học thử qua Zalo / Email ngay lập tức</span>
-        </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 }
